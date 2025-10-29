@@ -1,0 +1,354 @@
+/* Para darle estilo a un elemento en css se escribe su nombre en este caso
+para cambiar los parrafos escribo la letra p que es la etiqueta p que ademas despues se habren comillas
+dentro de estas se escriben los atributos a cambiar
+eso de escribir el nombre de la etiqueta a modificar se llama el selector*/
+
+/**se configura una tipografia descargada**/
+/**etiquetas generales**/
+p {
+    color: yellow;
+    text-align: justify;
+    font-size: large;
+    font-family: serif;
+    font-size: 24px;
+    color: #d4af37;
+    font-weight: bolder;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 6px;
+}
+
+p{
+    text-align: center;
+    font-family: Montserrat;
+}
+
+li{
+    color: #d4af37;
+}
+
+body h2:nth-child(4){
+    width: 10em;
+}
+
+
+h1{
+    margin: auto;
+    width: calc(100% - 6px);
+    font-size: 50px;
+    padding: 5px;
+    text-align: center;
+    border-bottom: 5px solid #af8a22;
+    color: #d4af37;
+    text-transform: capitalize;
+    font-family: kurale;
+    text-shadow: 1px 1px #000;
+}
+
+
+h2{
+    width: 10em;
+    color: #d4af37;
+    text-decoration: underline;
+}
+
+h3{
+    color: #d4af37;
+    text-decoration: underline;
+}
+
+h4{
+    color: #d4af37;
+    text-decoration: underline;
+}
+
+main{
+    z-index: 5;
+}
+
+body div:first-child{
+    display: flex;
+    flex-flow: wrap row;
+    align-items:center ;/**es mejor aling-items cuando solo ahi una linea de elementos en el eje cruzado es decir vertical cuando se usa row**/
+    justify-content: space-around;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+main h2:first-of-type{
+    display: block;
+    margin: auto;
+    padding: 10px;
+}
+
+main > div:nth-child(2){
+    display: flex;
+    flex-flow: wrap row;
+    justify-content:space-evenly ;
+    align-items:center ;
+    padding: 10px;
+}
+
+main h2:nth-child(3){
+    margin: auto;
+    width: calc(100% - 6px);
+    font-size: 50px;
+    padding: 5px;
+    text-align: center;
+    border-bottom: 5px solid #af8a22;
+    color: #d4af37;
+    text-transform: capitalize;
+    font-family: kurale;
+    text-shadow: 1px 1px #000;
+}
+
+main p:nth-child(6){
+    margin: auto;
+    width: 100%;
+    max-width: 1000px;
+    min-width: 400px;
+    backdrop-filter: blur(5px);
+    word-break: balance;
+    white-space: pre-line;
+}
+
+/**etiquetas generales**/
+/**layouts principales**/
+body {
+    background: linear-gradient(to bottom right, #000000, #333333, #d4af37);
+    background-attachment: fixed;
+    background-size: cover ;
+    background-image: url(https://img.genial.ly/60264d9cacc8b60fa9e5593c/d96cfeb7-45c9-4d7d-878c-095271eaadd1.jpeg);
+}
+
+/**layouts principales**/
+/**clases y id**/
+
+#nav-links{
+    display: flex;
+    position: sticky;
+    flex-flow: wrap row; /**flex-flow combina flex wrap y flex direction**/
+    align-items: center;/**alinea los elementos al eje central en este caso es horizontal dado que es flex-direction row**/
+    justify-content: space-evenly; /**space-between distribuye los elementos con mas espacio**/
+    max-width: 900px;/**max-with limita que tantos px se puede estirar el contenedor**/
+    min-width: 500px;
+    max-height: 300px;
+    min-height: 100px;
+    padding: 10px;
+    top: 0;
+    left: 44em;
+    border-bottom-left-radius: 10px;
+    border: 1px solid #000;
+    box-sizing: border-box;
+    box-shadow: 0 0 10px 0 rgb(0, 0, 0);
+    backdrop-filter: blur(5px);
+}
+
+.nav__item {
+    color: white;
+    background-color: #33333395;
+    border-radius: 0%;
+    padding: 5px;
+    white-space: pre-wrap;
+    word-break: auto;
+    font-size: larger;
+    font-weight: 100;
+    text-decoration: none;
+    text-align: center;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+
+.goty{
+    padding-top: -60px;
+    margin: 50px;
+    margin-top: -80px;
+    margin-left: -2px;
+}
+
+
+
+.Serie{
+    font-size: 24px;
+    text-align: left;
+    font-style: italic;
+    width: 50%;
+    max-width: 700px;
+    min-width: 400px;/**usar esta combinacion es como decirle al navegador que ocupe el 50% del contenedor pero que no se pase de 700px**/
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.platino{
+    border-radius: 10px;
+    opacity: 0.7;
+    object-fit: contain;
+}
+
+.derechos{
+    text-align: right;
+    font-size: larger;
+    text-shadow: 19cm;
+    text-align: center;
+    color: #d4af37;
+    text-decoration: underline;
+}
+
+
+
+
+.Jefes1{
+    max-width: 150px;
+    display: inline-block;
+    align-items: center;
+    vertical-align: middle;
+    margin: 40px;
+    margin-top: -19px;
+    margin-right:-100px; 
+    margin-left: 9px;
+}
+
+.mucho{
+    display: flex;
+    justify-content: left;
+    text-align: center;
+    vertical-align: center;
+    margin: auto;
+    font-size: larger;
+    text-align: right;
+    font-style: italic;
+    margin-left: 672px;
+}
+.mamon{
+    display: flex;
+    justify-content: left;
+    text-align: center;
+    vertical-align: center;
+    margin: auto;
+    font-size: larger;
+    text-align: right;
+    font-style: italic;
+    margin-left: 700px;
+}
+
+.cuenta{
+    max-width: 150px;
+    display: inline-block;
+    align-items: center;
+    vertical-align: middle;
+    margin: 55px;
+    margin-top: -20px;
+}
+
+.Ccomunidad{
+    display: flex;
+    justify-content: left;
+    text-align: center;
+    vertical-align: center;
+    margin: auto;
+    font-size: larger;
+    text-align: right;
+    font-style: italic;
+    margin-left: 770px;
+}
+
+.gran{
+    max-width: 150px;
+    display: inline-block;
+    align-items: center;
+    vertical-align: middle;
+    margin: 40px;
+    margin-top: -19px;
+    margin-right:-100px; 
+    margin-left: 9px;
+} 
+
+.mas{
+    display: flex;
+    justify-content: left;
+    text-align: center;
+    vertical-align: center;
+    margin: auto;
+    font-size: larger;
+    text-align: right;
+    font-style: italic;
+    margin-left: 756px;
+}
+
+.muchos{
+    max-width: 150px;
+    display: inline-block;
+    align-items: center;
+    vertical-align: middle;
+    margin: 40px;
+    margin-top: -19px;
+    margin-right:-100px; 
+    margin-left: 9px;
+}
+
+
+
+.Laureo{
+    margin-right: auto;
+    margin-top: -470px;
+    display: block;
+}
+
+.enorme{/**aveces margin auto no funciona si el elemeno no es display block o inline**/
+    display: block;
+    margin: auto;
+    width: 20em;
+    max-width: 1000px;
+    min-width: 200px;
+    padding: 10px;
+    object-fit: contain;
+    border: 3px solid #000;
+    border-radius: 10px;
+    box-sizing: border-box;
+    box-shadow: 0 0 10px 0 rgb(0, 0, 0);
+}
+
+
+.un{
+    font-size: 30px;
+    font-style: italic;
+}
+
+.ofrece{
+    text-align: center;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 300px;
+    margin-left: 500px;
+    border-radius: 6px
+}
+
+#MuchisimosJefes{
+    width:620px;
+    margin-left: 20px;
+}
+
+#muchisimosjefes2{
+    width: 619px;
+    position: absolute;
+    margin-left: 55px;
+}
+
+#weapons{
+    width: 10em;
+    margin-left: 170px;
+}
+/**clases y id**/
+/**pseudoclases**/
+/**pseudoclases**/
+/**media queris**/
+/**media queris**/
+
+
+
+
+/**la forma de seleccionar un elemento html puede ser con una clase y se selecciona con un punto y el nombre de la clase**/
+
+
+
+/*para darle estilo a una clase de html debe de tener el . y nombre de la clase por ejemplo .Recomendacion*/

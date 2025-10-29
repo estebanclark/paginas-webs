@@ -1,0 +1,23 @@
+#ignorar imagenes
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.svg
+*.webp
+
+# Ignorar videos
+*.mp4
+*.avi
+*.mov
+*.mkv
+*.webm
+
+# Ignorar fuentes
+*.ttf
+*.otf
+*.woff
+*.woff2
+
+#ignorar carpetas completas
+/imagenes/
