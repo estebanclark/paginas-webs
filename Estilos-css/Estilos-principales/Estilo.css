@@ -160,6 +160,25 @@ body {
 }
 
 
+#container-collage{
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    max-width: 1800px;
+    min-width: 400px;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-collage__item{
+    flex-grow: 1;/**permite que el elemento crezca en base al espacio sobrante o disponible de su contenedor similar a max withd**/
+    flex-shrink: 1 /*establece un maximo de que tanto se puede encojer el item similar a min-withd**/;
+    flex-basis: 0;
+    width: 100%;
+    height: 20em;
+    object-fit: contain;
+}
+/**el valor 1 en flex-grow y flex-shrik permite que el elemento se encoga o crezca dependiendo del espacio disponible y distribuyendose**/
 .goty{
     padding-top: -60px;
     margin: 50px;
@@ -208,49 +227,8 @@ body {
     margin-left: 9px;
 }
 
-.mucho{
-    display: flex;
-    justify-content: left;
-    text-align: center;
-    vertical-align: center;
-    margin: auto;
-    font-size: larger;
-    text-align: right;
-    font-style: italic;
-    margin-left: 672px;
-}
-.mamon{
-    display: flex;
-    justify-content: left;
-    text-align: center;
-    vertical-align: center;
-    margin: auto;
-    font-size: larger;
-    text-align: right;
-    font-style: italic;
-    margin-left: 700px;
-}
 
-.cuenta{
-    max-width: 150px;
-    display: inline-block;
-    align-items: center;
-    vertical-align: middle;
-    margin: 55px;
-    margin-top: -20px;
-}
 
-.Ccomunidad{
-    display: flex;
-    justify-content: left;
-    text-align: center;
-    vertical-align: center;
-    margin: auto;
-    font-size: larger;
-    text-align: right;
-    font-style: italic;
-    margin-left: 770px;
-}
 
 .gran{
     max-width: 150px;
@@ -275,24 +253,6 @@ body {
     margin-left: 756px;
 }
 
-.muchos{
-    max-width: 150px;
-    display: inline-block;
-    align-items: center;
-    vertical-align: middle;
-    margin: 40px;
-    margin-top: -19px;
-    margin-right:-100px; 
-    margin-left: 9px;
-}
-
-
-
-.Laureo{
-    margin-right: auto;
-    margin-top: -470px;
-    display: block;
-}
 
 .enorme{/**aveces margin auto no funciona si el elemeno no es display block o inline**/
     display: block;
@@ -308,6 +268,62 @@ body {
     box-shadow: 0 0 10px 0 rgb(0, 0, 0);
 }
 
+.puntos-importantes{
+    display: grid;/**auto-fill genera ya sea filas y columnas pero solo las que quepan**/
+    grid-template-columns: repeat(2, minmax(200px, 1fr));/**para que auto fill funcione min max debe de estar dentro de la misma llave**/
+    grid-template-rows: auto repeat(4, 1fr);/**una buena practica es poner 1fr**//**los nuevos elementos generan automaticamente filas**/
+    grid-template-areas: 
+    "texto texto"
+    "imagen reconocimiento1"
+    "imagen reconocimiento2"
+    "imagen reconocimiento3"
+    "imagen reconocimiento4";
+}/**grid area es como crear una tabla y cada texto dentro del grid-template area se le asignara a su elemento correspondiente**/
+/**al usar grid star o row star el grid deja de ser responsivo dado que se define la posicion del elemento y este no se podra mover de ahi 
+aun cuando la pantalla cambie de dimensiones**/
+
+.puntos-importantes h2{
+    grid-area: texto;
+}
+
+.puntos-importantes div:first-of-type{
+    grid-area: reconocimiento1;
+}
+
+.puntos-importantes div:nth-of-type(2){
+    grid-area: reconocimiento2;
+}
+
+.puntos-importantes div:nth-of-type(3){
+    grid-area: reconocimiento3;
+}
+
+.puntos-importantes div:nth-of-type(4){
+    grid-area: reconocimiento4;
+}
+
+.puntos-importantes div{
+    width: 100%;
+    height: 100%;
+    height: auto;
+    margin: auto;
+}
+
+.puntos-importantes img:last-child{
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    grid-area: imagen;
+}
+
+.puntos__importantes-item{
+    max-width: 10em;
+    min-width: 5em;
+    width: 30%;
+    object-fit: cover;
+}
 
 .un{
     font-size: 30px;
@@ -319,24 +335,17 @@ body {
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
     background-color: rgba(0, 0, 0, 0.3);
     width: 300px;
-    margin-left: 500px;
+    margin: auto;
     border-radius: 6px
 }
 
-#MuchisimosJefes{
-    width:620px;
-    margin-left: 20px;
-}
-
-#muchisimosjefes2{
-    width: 619px;
-    position: absolute;
-    margin-left: 55px;
-}
-
 #weapons{
-    width: 10em;
-    margin-left: 170px;
+    position: relative;
+    left: 10%;
+    width: 80%;
+    height: 30em;
+    max-width: 1700px;
+    min-width: 300px;
 }
 /**clases y id**/
 /**pseudoclases**/
